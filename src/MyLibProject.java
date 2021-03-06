@@ -284,11 +284,11 @@ public class MyLibProject
 		System.out.println("  [도서]");
 		System.out.println("1.도서 등록");
 		System.out.println("2.도서 전체 목록");		// 전체 목록
-		System.out.println("3.도서 조회");			// 하나하나 개별 조회
+		System.out.println("3.도서 조회");			 // 하나하나 개별 조회
 		System.out.println("4.도서 폐기");
 		System.out.println("  [회원]");
 		System.out.println("5.회원 전체 목록");		// 전체 회원 조회
-		System.out.println("6.회원 조회");			// 개별 회원 조회 
+		System.out.println("6.회원 조회");			 // 개별 회원 조회 
 		System.out.println("7.블랙리스트 관리");
 		System.out.println("0.로그아웃");
 		System.out.println();
@@ -827,11 +827,11 @@ public class MyLibProject
 						else	// cmp가 양수면(예정일 이후 반납) 연체.
 						{
 							sql = "update pro_userDB set bk_end = sysdate +7 where id = ?";	// 연체되면 pro_borrowDB에 반납일 입력하고 기록 남김, pro_userDB는 블랙리스트 처리
-							pstmt1 = con.prepareStatement(sql);							// 대출은 pro_bookDB에서만 판단하고 pro_borrowDB와는 관계없으므로 기록 남아도 상관없음
-							pstmt1.setString(1, id);									// 블랙리스트 등록 기간은 7일
+							pstmt1 = con.prepareStatement(sql);				// 대출은 pro_bookDB에서만 판단하고 pro_borrowDB와는 관계없으므로 기록 남아도 상관없음
+							pstmt1.setString(1, id);					// 블랙리스트 등록 기간은 7일
 							pstmt1.executeUpdate();
 							
-							sql = "update pro_borrowDB set bk_user = ? where bno = ?";		// pro_borrowDB에 연체자 ID 입력
+							sql = "update pro_borrowDB set bk_user = ? where bno = ?";	// pro_borrowDB에 연체자 ID 입력
 							pstmt2 = con.prepareStatement(sql);
 							pstmt2.setString(1, id);
 							pstmt2.setString(2, bno);
