@@ -283,12 +283,12 @@ public class MyLibProject
 		System.out.println("[관리자 메뉴]");
 		System.out.println("  [도서]");
 		System.out.println("1.도서 등록");
-		System.out.println("2.도서 전체 목록");	// 전체 목록
-		System.out.println("3.도서 조회");		 // 하나하나 개별 조회
+		System.out.println("2.도서 전체 목록");		// 전체 목록
+		System.out.println("3.도서 조회");			 // 하나하나 개별 조회
 		System.out.println("4.도서 폐기");
 		System.out.println("  [회원]");
-		System.out.println("5.회원 전체 목록");	// 전체 회원 조회
-		System.out.println("6.회원 조회");		 // 개별 회원 조회 
+		System.out.println("5.회원 전체 목록");		// 전체 회원 조회
+		System.out.println("6.회원 조회");			 // 개별 회원 조회 
 		System.out.println("7.블랙리스트 관리");
 		System.out.println("0.로그아웃");
 		System.out.println();
